@@ -1,4 +1,3 @@
-able File  26 lines (22 sloc)  428 Bytes
 #include "lists.h"
 
 /**
