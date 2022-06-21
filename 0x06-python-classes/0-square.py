@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" Module providing an empty definition of a class Square"""
 
-""" Empty definition of Class Square."""
 
 class Square():
-	pass
+    """ Empty definition of a Square"""
