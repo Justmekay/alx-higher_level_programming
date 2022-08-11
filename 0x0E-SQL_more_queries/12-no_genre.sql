@@ -1,7 +1,7 @@
--- list all genres and display the number of shows linked to each
-SELECT tg.name AS genre, COUNT(*) AS number_of_shows
-FROM tv_genres tg
-INNER JOIN tv_show_genres tsg
-ON tsg.genre_id = tg.id
-GROUP BY tsg.genre_id
-ORDER BY number_of_shows DESC;
+--  lists all shows contained in hbtn_0d_tvshows without a genre linked
+-- lists all rows of a database that don't have one column
+SELECT tv_shows.title, tv_show_genres.genre_id
+FROM tv_shows LEFT JOIN tv_show_genres
+ON tv_shows.id = tv_show_genres.show_id
+WHERE tv_show_genres.genre_id IS NULL
+ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
