@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""fetches https://intranet.hbtn.io/status."""
+'''
+Send a request to a URL and display the body of the response
+'''
+
 import requests
 
+URL = 'https://alx-intranet.hbtn.io/status'
 
-if __name__ == "__main__":
-    r = requests.get("https://intranet.hbtn.io/status")
+if __name__ == '__main__':
+
+    resp = requests.get(URL)
     print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    print("\t- type:", type(resp.text))
+    print("\t- content:", resp.text)
